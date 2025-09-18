@@ -197,7 +197,7 @@ where
 
     // Process chunks in batches to minimize memory usage
     // Use a reasonable batch size - could be made configurable
-    const BATCH_SIZE: usize = 10;
+    const BATCH_SIZE: usize = 30;
 
     for batch_start in (0..chunk_infos.len()).step_by(BATCH_SIZE) {
         let batch_end = (batch_start + BATCH_SIZE).min(chunk_infos.len());
